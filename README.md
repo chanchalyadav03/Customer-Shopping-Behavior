@@ -33,7 +33,7 @@ Missing Values | 37 in review ratings (handled via median imputation)
 - **Python**: Pandas, NumPy, Matplotlib
 - **SQL (PostgreSQL)**
 - **Power BI**
-- **Jupyter Notebook** / **VS Code**
+- **Jupyter Notebook** 
 
 ---
 
@@ -43,9 +43,9 @@ Missing Values | 37 in review ratings (handled via median imputation)
 |---|---|---|
 1 | Data cleaning & preprocessing | Python  
 2 | Feature engineering | Python  
-3 | SQL-based business analysis | PostgreSQL  
+3 | SQL-based business analysis | MYSQL  
 4 | Dashboard creation | Power BI  
-5 | Final insights & recommendations | PDF Report  
+ 
 
 ---
 
