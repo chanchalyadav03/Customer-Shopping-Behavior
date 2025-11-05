@@ -12,7 +12,7 @@ select customer_id,purchase_amount from customer where discount_applied='Yes' an
 select item_purchased,round(avg(review_rating),2) as avg_rating from customer group by item_purchased order by avg_rating desc  limit 5; 
 
 -- Q4. Compare the average Purchase Amounts between Standard and Express Shipping. 
- select shipping_type,round(avg(purchase_amount),2) as avg_amount_spend from customer group by shipping_type;
+  select shipping_type,round(avg(purchase_amount),2) as avg_amount_spend from customer where shipping_type in ('standard','express') group by shipping_type;
  
 -- Q5. Do subscribed customers spend more? Compare average spend and total revenue 
 -- between subscribers and non-subscribers.
@@ -20,6 +20,7 @@ select subscription_status,count(customer_id) as total_customer,round(avg(purcha
 
 -- Q6. Which 5 products have the highest percentage of purchases with discounts applied?
 select item_purchased,	round((count(*)*100/(select count(*) from customer c2 where c2.item_purchased=c1.item_purchased )),2) as discount_rate from customer c1 where discount_applied='Yes' group by item_purchased  order by discount_rate desc limit 5;
+select item_purchased , round((sum(case when discount_applied='Yes' then 1 else 0 End)/count(*)*100),2) as discount_rate from customer group by item_purchased order by discount_rate desc limit 5;
 
 -- Q7. Segment customers into New, Returning, and Loyal based on their total 
 -- number of previous purchases, and show the count of each segment. 
