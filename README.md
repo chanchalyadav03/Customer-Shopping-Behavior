@@ -31,7 +31,7 @@ Missing Values | 37 in review ratings (handled via median imputation)
 ## 🛠 Tech Stack
 
 - **Python**: Pandas, NumPy, Matplotlib
-- **SQL (PostgreSQL)**
+- **SQL (MYSQL)**
 - **Power BI**
 - **Jupyter Notebook** 
 
